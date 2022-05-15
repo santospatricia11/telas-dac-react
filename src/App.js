@@ -1,29 +1,27 @@
-
+import React from 'react';
 import './App.css';
+import 'bootswatch/dist/darkly/bootstrap.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Cadastro Pessoa
-        </p>
-        <div>
-          <label className='label-formulario'>Nome</label>
-          <input className='input-fom'></input>
-          <label className='label-formulario'>CPF</label>
-          <input className='input-fom'></input>
-          <label className='label-formulario'>Email</label>
-          <input className='input-fom'></input>
-          <label className='label-formulario'>Telefone</label>
-          <input></input>
-          <label className='label-formulario'>Tipo</label>
-          <input></input>
-        </div>
-       <button className='buntton'>Salvar</button>
-      </header>
-    </div>
-  );
+import NavBar from './components/NavBar';
+import AppRoutes from './main/AppRoutes';
+import { BrowserRouter } from 'react-router-dom';
+export default class App extends React.Component{
+  render() {
+
+    return (
+      < BrowserRouter>
+      
+      <div>
+        <NavBar/>
+       <AppRoutes/>
+       
+      </div>
+      
+      </BrowserRouter>
+  
+    );
+  }
 }
 
-export default App;
+
+
