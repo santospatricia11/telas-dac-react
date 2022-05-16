@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootswatch/dist/darkly/bootstrap.css';
-import './CadastroPessoa.css';
 
 import Card from "../components/Card";
 import FormGroup from '../components/FormGroup';

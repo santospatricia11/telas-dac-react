@@ -1,19 +1,22 @@
 import React from "react";
 import 'bootswatch/dist/darkly/bootstrap.css';
-import Card from "../components/Card";
+import Card from "../components/Card"
 import FormGroup from '../components/FormGroup';
+
+
 import {withRouter}from 'react-router-dom';
-export default class DeletarPessoa extends React.Component{
+
+export default class EditarProduto extends React.Component{
 
     state = {
         nome: '',
-        buscar: '',
+        id: ''
       
     }
 
-    cadastro =()=>{
+    editar =()=>{
         console.log('Nome:',this.state.nome);
-        console.log('buscar:',this.state.buscar);
+        console.log('Id:',this.state.id);
       
     }
     render(){
@@ -25,7 +28,7 @@ export default class DeletarPessoa extends React.Component{
                           
                           
                             <div className="card md-3">
-                                <h3 className="card-header">Deletar Pessoa</h3>
+                                <h3 className="card-header">Editar Produto</h3>
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col-lg-12">
@@ -37,12 +40,12 @@ export default class DeletarPessoa extends React.Component{
                                                 </div>
                                                                                             
                                                 <div className="form-group">
-                                                    <label htmlFor="inputBuscar">Buscar</label>
-                                                    <input type="buscar"className="form-comtrol"id="inputBuscar"value={this.state.tipo}
-                                                    onChange={(e)=>this.setState({buscar:e.target.value})}/>
+                                                    <label htmlFor="inputEditar">Editar</label>
+                                                    <input type="editar"className="form-comtrol"id="inputEditar"value={this.state.tipo}
+                                                    onChange={(e)=>this.setState({editarr:e.target.value})}/>
                                                 </div>
                                     
-                                                <button type="button" class="btn btn-info"onClick={this.cadastro}>Buscar</button>
+                                                <button type="button" class="btn btn-info"onClick={this.editar}>Editar</button>
                                             
                                             </fieldset>
                                         </div>

@@ -1,11 +1,11 @@
 import 'bootswatch/dist/darkly/bootstrap.css';
 import { Route,BrowserRouter } from 'react-router-dom';
 
-import CadastroPessoa from "../screens/CadastroPessoa";
-import CadastroProduto from "../screens/CadastroProduto";
-import EditarProduto from "../screens/EditarProduto";
-import DeletarPessoa from "../screens/DeletarPessoa";
-import Home from "../screens/Home";
+import CadastroPessoa from "../screens/pageCadastroPessoa/CadastroPessoa";
+import CadastroProduto from "../screens/pageCadastroProduto/CadastroProduto";
+import EditarProduto from "../screens/pageDeletePessoa/DeletarPessoa";
+import DeletarPessoa from "../screens/pageEditaProduto/EditarProduto";
+import Home from "../screens/pageHome/Home";
 
 function AppRoutes() {
 

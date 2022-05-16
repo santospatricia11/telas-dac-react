@@ -1,7 +1,8 @@
 import React from "react";
 import 'bootswatch/dist/darkly/bootstrap.css';
-import './CadastroProduto.css';
+
 import Card from "../components/Card";
+
 import FormGroup from '../components/FormGroup';
 import {withRouter}from 'react-router-dom';
 

@@ -1,7 +1,8 @@
 import React from "react";
 import Card from "../components/Card";
-import FormGroup from '../components/FormGroup';
-import NavBarItem from "./NavBarItem";
+import FormGroup from "../components/FormGroup";
+import NavBarItem from "../components/NavBarItem";
+
 import 'bootswatch/dist/darkly/bootstrap.css';
 
 function NavBar(props) {
