@@ -23,6 +23,9 @@ function NavBar(props) {
                     </a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link" href="/Login">Login</a>
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="/CadastroPessoa">Cadastro Pessoa</a>
                   </li>
                   <li class="nav-item">
