@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import 'bootswatch/dist/darkly/bootstrap.css';
 
 import Card from "../components/Card";
@@ -12,20 +13,47 @@ import {withRouter}from 'react-router-dom';
         nome: '',
         cpf: '',
         email:  '',
+        password:'',
         endereco:'',
         tipo:''
     }
+
     salvar=()=>{
         console.log(this.state);
     }
     buscar =()=>{
        console.log(this.buscar);
     }
+    create = async ()=>{
+        await axios.post(`http://localhost:8080/api/pessoa}`,
+      {
+          name:this.state.nome,
+          cpf:this.state.cpf,
+          email:this.state.email,
+          password:this.state.password,
+          endereco:this.state.endereco,
+          tipo:this.state.tipo
 
+     
+  
+          }
+      ).then(response => 
+      {
+          console.log(response);
+      }
+      ).catch(error =>
+          {
+              console.log(error.response);
+          }
+     
+      );
+      console.log("request finished");
+  }
     cadastro =()=>{
         console.log('Nome:',this.state.nome);
         console.log('CPF:',this.state.cpf);
         console.log('Email:',this.state.email);
+        console.log("Password:",this.state.password);
         console.log('Endereco:',this.state.endereco);
         console.log('Tipo:',this.state.tipo);
     }
@@ -60,6 +88,14 @@ import {withRouter}from 'react-router-dom';
                                     onChange={e => this.setState({email:e.target.value})}/>
                                 </FormGroup>
 
+                                <FormGroup className label= "Password: *"htmlFor="inputPassword">
+                                    <input type="password"
+                                    id="inputPassword"
+                                    className="form-control"
+                                    email="password"
+                                    onChange={e => this.setState({password:e.target.value})}/>
+                                </FormGroup>
+
                                 <FormGroup className label= "Endereco: *"htmlFor="inputEndereco">
                                     <input type="text"
                                     id="inputEndereco"
@@ -77,10 +113,10 @@ import {withRouter}from 'react-router-dom';
                                 </FormGroup>          
 
 
-                                    <button onClick={this.salvar} type="button" class="btn btn1-success"> 
-                                    <i className="pi pi-save"></i>Salvar</button>
+                                    <button onClick={this.salvar} type="button" className="btn btn1-success"> 
+                                    <i className="pi pi-save"></i>Cadastrar</button>
                                     
-                                    <button onClik={this.buscar} type="button" class="btn btn-light">
+                                    <button onClik={this.buscar} type="button" className="btn btn-light">
                                     <i className="pi pi-times"></i>Buscar</button>
                             </div>
 

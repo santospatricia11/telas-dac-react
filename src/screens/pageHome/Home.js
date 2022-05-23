@@ -1,6 +1,7 @@
 import React from "react";
+import axios from "axios";
 import 'bootswatch/dist/darkly/bootstrap.css';
-
+import UpdatePessoa from "../../screens/pageUdatePessoa/UpdatePessoa";
 export default class Home extends React.Component {
 
     render() {

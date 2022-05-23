@@ -2,7 +2,7 @@ import React from "react";
 import 'bootswatch/dist/darkly/bootstrap.css';
 
 import Card from "../components/Card";
-
+import axios from "axios";
 import FormGroup from '../components/FormGroup';
 import {withRouter}from 'react-router-dom';
 
@@ -42,7 +42,7 @@ export default class CadastroProduto extends React.Component{
                                     onChange={e => this.setState({nomeProduto:e.target.value})}/>
                                 </FormGroup>
 
-                                <FormGroup className label= "ID: *"htmlFor="inputId">
+                                <FormGroup className label=  "ID: *"htmlFor="inputId">
                                     <input type="number"
                                     id="inputId"
                                     className="form-control"
@@ -58,10 +58,10 @@ export default class CadastroProduto extends React.Component{
                                     tipo="tipo"
                                     onChange={e => this.setState({tipo:e.target.value})}/>
                                 </FormGroup>          
-                                <button onClik={this.create}type="button" class="btn btn-success">
-                                    <i className="pi pi-save"></i>Salvar</button>
+                                <button onClik={this.create}type="button" className="btn btn-success">
+                                    <i className="pi pi-save"></i>Cadastrar</button>
                                 
-                                <button onClik={this.buscar} type="button" class="btn btn-danger">
+                                <button onClik={this.buscar} type="button" className="btn btn-danger">
                                     <i className="pi pi-times"></i>Buscar</button>
                             </div>
 

@@ -7,14 +7,14 @@ import axios from "axios";
 
  
     
-    class DeletePessoa extends React.Component {
+    class DeleteProduto extends React.Component {
     
         state = {
-          cpf: 0
+          id: 0
         }
       
         delete = () => {
-          axios.delete(`http://localhost:8080/api/pessoa/${this.state.cpf}`,
+          axios.delete(`http://localhost:8080/api/produto/${this.state.id}`,
           ).then(response => 
             {
               console.log(response);
@@ -39,7 +39,7 @@ import axios from "axios";
                   <div className="bs-docs-section">
     
                     <div className="card border-danger mb-3" style={this.styles.cardBorder}>
-                      <h3 className="card-header text-center">Delete de Pessoas</h3>
+                      <h3 className="card-header text-center">Exclusão de Produtos</h3>
                       <div className="card-body">
           
                         <div className='row'>
@@ -47,10 +47,10 @@ import axios from "axios";
                             <div className='bs-component'>
     
                                 <div className="form-group">
-                                  <label className="form-label mt-4">CPF:</label>
+                                  <label className="form-label mt-4">Id:</label>
                                   <div className="form-floating mb-3">
-                                    <input type="text" className="form-control" id="inputId" placeholder="Digite o Id da Categoria" value={this.state.cpf} onChange={(e) => { this.setState({id: e.target.value })}} />
-                                    <label htmlFor="inputId">Digite o Cpf da Pessoa</label>
+                                    <input type="text" className="form-control" id="inputId" placeholder="Digite o Id da Categoria" value={this.state.id} onChange={(e) => { this.setState({id: e.target.value })}} />
+                                    <label htmlFor="inputId">Digite o Id Produto</label>
                                   </div>
                                 </div>
                                 
@@ -86,4 +86,4 @@ import axios from "axios";
         }
     } 
     
-    export default withRouter(DeletePessoa);
+    export default withRouter(DeleteProduto);
