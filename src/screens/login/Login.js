@@ -12,6 +12,7 @@ class Login extends React.Component {
     state = {
         user: "",
         password: ""
+             
     }
     login = () => {
         if (this.state.user === "@patricia" && this.state.password === "123") {
